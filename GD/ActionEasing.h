@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 #include "ActionInterval.h"
 
 class ActionEasing : public ActionInterval

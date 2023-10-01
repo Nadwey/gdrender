@@ -3,6 +3,7 @@
 #include "Layer.h"
 #include "Level.h"
 
+#include <memory>
 #include <array>
 #include "AudioEngine.h"
 

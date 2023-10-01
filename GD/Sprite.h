@@ -4,6 +4,7 @@
 #include "ImageLoader.h"
 #include "HSV.h"
 
+#include <memory>
 #include <iostream>
 
 class GameObject;

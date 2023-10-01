@@ -4,7 +4,7 @@
 #include "Sprite.h"
 #include "HSV.h"
 #include <iostream>
-
+#include <memory>
 #include <unordered_map>
 
 class ActionInterval;

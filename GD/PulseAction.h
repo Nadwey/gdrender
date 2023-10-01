@@ -1,6 +1,7 @@
 #pragma once
-#include "ActionInterval.h"
 
+#include <memory>
+#include "ActionInterval.h"
 #include <SFML/Graphics.hpp>
 #include "Sprite.h"
 

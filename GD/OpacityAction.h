@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 #include "ActionInterval.h"
 
 class OpacityAction : public ActionInterval

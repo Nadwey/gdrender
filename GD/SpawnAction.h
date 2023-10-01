@@ -2,6 +2,7 @@
 
 #include "ActionInterval.h"
 #include "Group.h"
+#include <memory>
 #include <vector>
 
 class SpawnAction : public ActionInterval

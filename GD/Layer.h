@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <memory>
 #include <SFML/Graphics.hpp>
 
 class Layer

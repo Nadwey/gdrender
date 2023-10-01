@@ -29,7 +29,9 @@ void Application::start()
 	ImGui::SFML::Init(*window);
 
 	ImGui::GetIO().Fonts->Clear();
+#ifdef _WIN32
 	ImGui::GetIO().Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\arial.ttf", 16);
+#endif
 	ImGui::SFML::UpdateFontTexture();
 
 	ImGuiStyle& style = ImGui::GetStyle();

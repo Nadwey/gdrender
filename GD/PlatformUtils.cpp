@@ -23,4 +23,11 @@ std::optional<std::filesystem::path> PlatformUtils::getGDAppdata()
 	return path / "GeometryDash";
 }
 
+#else
+
+std::optional<std::filesystem::path> PlatformUtils::getGDAppdata()
+{
+	return "~/.local/share/Steam/steamapps/compatdata/322170/pfx/drive_c/users/steamuser/Local Settings/Application Data";
+}
+
 #endif

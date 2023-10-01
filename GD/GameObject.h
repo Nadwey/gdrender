@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 #include "SFML/Graphics.hpp"
 #include "Sprite.h"
 #include "json.hpp"

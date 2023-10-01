@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ActionInterval.h"
+#include <memory>
 #include <vector>
 
 class Sequence : public ActionInterval

@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 #include "EffectGameObject.h"
 
 class ActionInterval;

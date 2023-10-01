@@ -5,6 +5,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(SFML_BUILD_AUDIO OFF)
 
+IF( NOT CMAKE_BUILD_TYPE )
+   SET( CMAKE_BUILD_TYPE Release ... FORCE )
+ENDIF()
+
 project(gdrender)
 
 include(get_cpm.cmake)
@@ -62,7 +66,7 @@ CPMAddPackage("gh:libcpr/cpr#1.10.4")
 target_include_directories(gdrender PRIVATE
     GD/include
     GD/include/imgui
-    GD/include/imgui-SFML
+    GD/include/imgui-sfml
     GD/include/raudio
 )
 
@@ -72,12 +76,22 @@ target_compile_definitions(gdrender PRIVATE
     SUPPORT_MODULE_RAUDIO
 )
 
-target_link_libraries(gdrender
-    sfml-graphics
-    cpr::cpr
-    opengl32
-    zlib
-)
+if(UNIX OR APPLE)
+    target_link_libraries(gdrender
+        sfml-graphics
+        cpr::cpr
+        GL
+        zlib
+    )
+else()
+    target_link_libraries(gdrender
+        sfml-graphics
+        cpr::cpr
+        opengl32
+        zlib
+    )
+endif()
+
 
 
 install(TARGETS gdrender)

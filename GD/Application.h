@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 #include "Layer.h"
 
 class Application

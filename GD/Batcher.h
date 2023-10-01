@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 #include "Sprite.h"
 #include "tsl/ordered_map.h"
 #include <iostream>
